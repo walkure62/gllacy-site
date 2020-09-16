@@ -1,0 +1,52 @@
+:root {
+    --white: #FFFFF;
+    --blue-background: #8996A6;
+    --green-background: #849D8F;
+    --brown-background: #9D8B84;
+    --orange-gradient-main: gradient(180deg, #F26843 0%, #E74A35 100%);
+    --orange-gradient-hover:gradient(180deg, #F26843 0%, #E74A35 100%);
+
+    --dark-grey:#323232;
+    --light-grey:#5A5A5A;
+    --hover-orange:#FBDED7;
+    --click-orange:#F6B5A5;
+    --main-orange:#D07058;
+    --opasity-white:rgba(255, 255, 255, 0.2);
+    --link-orange: #E84D37;
+}
+
+/* Fonts */
+
+@font-face { 
+    font-family: "Roboto";
+    src: local("Roboto"),
+         url(/fonts/roboto.woff2) format("woff2"), 
+         url(/fonts/roboto.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Roboto-medium";
+    src: local("Roboto"),
+         url(/fonts/robotomedium.woff2) format("woff2"), 
+         url(/fonts/robotomedium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Roboto-bold";
+    src: local("Roboto"),
+         url(/fonts/robotobold.woff2) format("woff2"), 
+         url(/fonts/robotobold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body { margin: 0 }
+img { max-width: 100% }
+a { text-decoration: none }
+
+/* Styles for index.html */
+
