@@ -1,18 +1,21 @@
 :root {
-    --white: #FFFFF;
+    --white: #ffffff;
     --blue-background: #8996A6;
     --green-background: #849D8F;
     --brown-background: #9D8B84;
-    --orange-gradient-main: gradient(180deg, #F26843 0%, #E74A35 100%);
-    --orange-gradient-hover:gradient(180deg, #F26843 0%, #E74A35 100%);
-
+    --orange-gradient-main: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    --orange-gradient-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    --orange-gradient-active: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    --raspberry-color: #981a3c;
+    --chocolate-color: #45200c;
+    --waffle-color: #eee2ca;
     --dark-grey:#323232;
     --light-grey:#5A5A5A;
-    --hover-orange:#FBDED7;
-    --click-orange:#F6B5A5;
+    --light-link-orange:#FFBC9E;
+    --dark-link-orange: #E84D37;
     --main-orange:#D07058;
-    --opasity-white:rgba(255, 255, 255, 0.2);
-    --link-orange: #E84D37;
+    --opasity-white-main:rgba(255, 255, 255, 0.2);
+    --opasity-white-footer:rgba(255, 255, 255, 0.8);
 }
 
 /* Fonts */
@@ -44,9 +47,409 @@
     font-style: normal;
 }
 
-body { margin: 0 }
-img { max-width: 100% }
-a { text-decoration: none }
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    outline: none;
+}
+
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--white);
+    background-color: var(--green-background);
+}
+
+img { 
+    max-width: 100% 
+}
+
+a { 
+    text-decoration: none;
+    color: var(--white);
+}
 
 /* Styles for index.html */
 
+.header__nav_list {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    color: inherit;
+    list-style-type: none;
+}
+
+.header__nav_link a:hover {
+    display: block;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px; 
+    color: var(--dark-grey);
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 26px;
+}
+
+.header__nav_link a:active {
+    background: #EDEDED;
+    box-shadow: inset 0px 2px 1px #696969;
+}
+
+.header__nav_button_search a {
+    background-color: var(--opasity-white-main);
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.header__nav_button_search a:hover {
+    background-color: var(--white);
+}
+
+.header__nav_button_login {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: inherit;
+    background-color: var(--opasity-white);
+}
+
+.header__nav_button_login a:hover {
+    background-color: var(--white);
+    color: var(--dark-grey);
+}
+
+.header__nav_button_basket {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: inherit;
+    background-color: var(--opasity-white);
+}
+
+.header__contacts p {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.header__contacts a {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+    color: inherit;
+}
+.header__contacts a:hover, .header__contacts a:active {
+    color: var(--light-link-orange);
+}
+
+
+.main__banner_title {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.main__banner_button {
+    background: var(--orange-gradient-main);
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    color: var(--white);
+    box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+    border: none;
+}
+
+.main__banner_button:hover {
+    background: var(--orange-gradient-hover);
+}
+
+.main__banner_button:active {
+    background: var(--orange-gradient-active);
+}
+
+.toggle__circle {
+    width: 21px;
+    height: 21px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.main__article_title {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+}
+
+.article_1 {
+    background-color: var(--raspberry-color);
+}
+
+.article_2 {
+    background-color: var(--chocolate-color);
+}
+
+.main__article_description {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.main__article_button {
+    background: var(--orange-gradient-main);
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white);
+    box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+    border: none;
+}
+
+.main__article_button:hover {
+    background: var(--orange-gradient-hover);
+}
+
+.main__article_button:active {
+    background: var(--orange-gradient-active);
+}
+
+.main__catalog_list {
+    list-style-type: none;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.hit_background {
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 61px;
+    width: 61px;
+}
+
+.item_price {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.item_scale {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+}
+.main__advantages {
+    background-color: var(--waffle-color);
+}
+
+.main__advantages_title {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--dark-grey);
+}
+
+.main__advantages_icon {
+    height: 49px;
+    width: 49px;
+    border: 2px solid #323232;
+    border-radius: 50%;
+}
+
+.main__advantages_description {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--dark-grey);
+}
+.main__news {
+    background-color: var(--white);
+}
+
+.main__news_text {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--dark-grey);
+}
+
+.main__news_link {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-decoration: underline;
+    color: var(--dark-grey);
+}
+
+.main__news_link:hover, .main__news_link:active {
+    color: var(--dark-link-orange);
+}
+
+.main_mailing{
+    background-color: var(--white);
+}
+
+.main_mailing_description {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--light-grey);
+}
+
+.main_mailing_input::placeholder {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_mailing_input:focus {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_mailing_button {
+    background: var(--orange-gradient-main);
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white);
+    box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+    border: none;
+}
+
+.main_mailing_button:hover {
+    background: var(--orange-gradient-hover);
+}
+
+.main_mailing_button:active {
+    background: var(--orange-gradient-active);
+}
+
+.main__maps_contacts {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--dark-grey);
+    background-color: var(--white);
+}
+
+.main__maps_adress, .main__maps_tel {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--dark-grey);
+}
+
+.main__maps_tel:hover, .main__maps_tel:active {
+    color: var(--dark-link-orange);
+}
+
+.main__maps_button {
+    background: var(--orange-gradient-main);
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white);
+    box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+    border: none;
+}
+
+.main__maps_button:hover {
+    background: var(--orange-gradient-hover);
+}
+
+.main__maps_button:active {
+    background: var(--orange-gradient-active);
+}
+
+.footer__socials_list{
+    list-style-type: none;
+}
+
+.footer__nav_list {
+    list-style-type: none;
+}
+
+.footer__nav_link {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: underline;
+}
+
+.footer__nav_link:first-child {
+    font-weight: bold;
+}
+
+.footer__nav_link a:hover, .footer__nav_link a:active {
+    color: var(--light-link-orange);
+}
+
+.footer__roots_info {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+}
