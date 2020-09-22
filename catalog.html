@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Gllacy - Catalog of icecream</title>
-    <link rel="stylesheet" href="css/nornalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nornalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <section class="header__logo">
         <a href="index.html">
-          <img src="https://via.placeholder.com/154x64" alt="logo" />
+          <img src="/img/logo.svg" width="154px" height="64px" alt="logo" />
         </a>
       </section>
       <nav class="header__nav catalog-header__nav">
@@ -28,34 +31,59 @@
         </ul>
         <div class="header__nav_button_search">
           <a href="#">
-            <img src="https://via.placeholder.com/16x16" alt="search-icon" />
+            <img
+              src="/img/search-icon.svg"
+              width="16px"
+              height="16px"
+              alt="search-icon"
+            />
           </a>
         </div>
         <div class="header__nav_button_login">
           <a href="#">
-            <img src="https://via.placeholder.com/20x19" alt="login-icon" />
+            <img
+              src="/img/login-icon.svg"
+              width="20px"
+              height="19px"
+              alt="login-icon"
+            />
           </a>
         </div>
         <div class="header__nav_button_basket">
           <a href="#">
-            <img src="https://via.placeholder.com/21x20" alt="basket-icon" />
+            <img
+              src="/img/basket-icon.svg"
+              width="21px"
+              height="20px"
+              alt="basket-icon"
+            />
           </a>
         </div>
       </nav>
       <section class="header__bread-crumbs">
         <ul class="header__bread-crumbs_list">
-            <li class="header__bread-crumbs_item">
-              <a href="index.html">Главная</a>
-            </li>
+          <li class="header__bread-crumbs_item">
+            <a href="index.html">Главная</a>
+          </li>
           <li class="header__bread-crumbs_item">
             <div>
-              <img src="https://via.placeholder.com/6x6" alt="follow" />
+              <img
+                src="/img/follow-bread-crumbs.svg"
+                width="6px"
+                height="6px"
+                alt="follow"
+              />
             </div>
             <a href="catalog.html">Каталог</a>
           </li>
           <li class="header__bread-crumbs_item">
             <div>
-              <img src="https://via.placeholder.com/6x6" alt="follow" />
+              <img
+                src="/img/follow-bread-crumbs.svg"
+                width="6px"
+                height="6px"
+                alt="follow"
+              />
             </div>
             <a href="#">Сливочное</a>
           </li>
@@ -68,9 +96,9 @@
     </header>
 
     <main>
-        <div class="main___catalog_title">
-            <h1>Сливочное мороженое</h1>
-        </div>
+      <div class="main___catalog_title">
+        <h1>Сливочное мороженое</h1>
+      </div>
       <section class="main___catalog_filtres">
         <form>
           <div class="main___catalog_sort">
@@ -85,45 +113,120 @@
           <div class="main___catalog_price-diapazone">
             <p class="catalog_sort_title">Цена: 100 ₽ – 500 ₽</p>
             <div class="catalog__range_background">
-              <input class="catalog__range" type="range" multiple min=" 0 " step="1" max=" 1000 "/>
+              <input
+                class="catalog__range"
+                type="range"
+                multiple
+                min=" 0 "
+                step="1"
+                max=" 1000 "
+              />
             </div>
           </div>
           <div class="main___catalog_fatness">
             <p class="catalog_sort_title">Жирность:</p>
             <div class="catalog__radio">
-            <input class="catalog__radio_input" name="fatness" type="radio" value="0%" id="1" />
+              <input
+                class="catalog__radio_input"
+                name="fatness"
+                type="radio"
+                value="0%"
+                id="1"
+              />
               <label class="catalog__radio_label" for="1">0%</label>
-            <input class="catalog__radio_input" name="fatness" type="radio" value="до 10%" checked id="2" />
-            <label class="catalog__radio_label" for="2">до 10%</label>
-            <input class="catalog__radio_input" name="fatness" type="radio" value="до 30%" id="3" />
-            <label class="catalog__radio_label" for="3">до 30%</label>
-            <input class="catalog__radio_input" name="fatness" type="radio" value="выше 30%" id="4" />
-            <label class="catalog__radio_label" for="4">выше 30%</label>
-          </div>
+              <input
+                class="catalog__radio_input"
+                name="fatness"
+                type="radio"
+                value="до 10%"
+                checked
+                id="2"
+              />
+              <label class="catalog__radio_label" for="2">до 10%</label>
+              <input
+                class="catalog__radio_input"
+                name="fatness"
+                type="radio"
+                value="до 30%"
+                id="3"
+              />
+              <label class="catalog__radio_label" for="3">до 30%</label>
+              <input
+                class="catalog__radio_input"
+                name="fatness"
+                type="radio"
+                value="выше 30%"
+                id="4"
+              />
+              <label class="catalog__radio_label" for="4">выше 30%</label>
+            </div>
           </div>
           <div class="main___catalog_ingredients">
             <p class="catalog_sort_title">Наполнители:</p>
             <div class="catalog__checkbox">
-            <input class="catalog__checkbox_input" type="checkbox" name="filler" value="chocolate" checked id="chocolate"/>
-            <label class="catalog__checkbox_label" for="chocolate">шоколадные</label>
-            <input class="catalog__checkbox_input" type="checkbox" name="filler" value="powdered sugar" checked id="sugar"/>
-            <label class="catalog__checkbox_label" for="sugar">сахарные присыпки</label>
-            <input class="catalog__checkbox_input" type="checkbox" name="filler" value="fruits" id="fruits"/>
-            <label class="catalog__checkbox_label" for="fruits">фрукты</label>
-            <input class="catalog__checkbox_input" type="checkbox" name="filler" value="syrup" id="syrup"/>
-            <label class="catalog__checkbox_label" for="syrup">сиропы</label>
-            <input class="catalog__checkbox_input" type="checkbox" name="filler" value="jam" id="jam"/>
-            <label class="catalog__checkbox_label" for="jam">джемы</label>
+              <input
+                class="catalog__checkbox_input"
+                type="checkbox"
+                name="filler"
+                value="chocolate"
+                checked
+                id="chocolate"
+              />
+              <label class="catalog__checkbox_label" for="chocolate"
+                >шоколадные</label
+              >
+              <input
+                class="catalog__checkbox_input"
+                type="checkbox"
+                name="filler"
+                value="powdered sugar"
+                checked
+                id="sugar"
+              />
+              <label class="catalog__checkbox_label" for="sugar"
+                >сахарные присыпки</label
+              >
+              <input
+                class="catalog__checkbox_input"
+                type="checkbox"
+                name="filler"
+                value="fruits"
+                id="fruits"
+              />
+              <label class="catalog__checkbox_label" for="fruits">фрукты</label>
+              <input
+                class="catalog__checkbox_input"
+                type="checkbox"
+                name="filler"
+                value="syrup"
+                id="syrup"
+              />
+              <label class="catalog__checkbox_label" for="syrup">сиропы</label>
+              <input
+                class="catalog__checkbox_input"
+                type="checkbox"
+                name="filler"
+                value="jam"
+                id="jam"
+              />
+              <label class="catalog__checkbox_label" for="jam">джемы</label>
+            </div>
           </div>
-          </div>
-          <button class="main___catalog_filtres_button" type="submit">Применить</button>
+          <button class="main___catalog_filtres_button" type="submit">
+            Применить
+          </button>
         </form>
       </section>
       <section class="catalog">
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="catalog__item-card" id="1">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-1"/>
+              <img
+                src="/img/item-1.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-1"
+              />
               <div>
                 <p class="item_price">310 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -133,7 +236,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="2">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-1" />
+              <img
+                src="/img/item-2.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-2"
+              />
               <div>
                 <p class="item_price">380 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -143,7 +251,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="3">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-2" />
+              <img
+                src="/img/item-3.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-3"
+              />
               <div>
                 <p class="item_price">355 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -153,7 +266,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="4">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-3" />
+              <img
+                src="/img/item-4.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-4"
+              />
               <div>
                 <p class="item_price">415 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -163,7 +281,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="5">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-4" />
+              <img
+                src="/img/item-5.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-5"
+              />
               <div>
                 <p class="item_price">415 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -173,7 +296,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="6">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-5" />
+              <img
+                src="/img/item-6.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-6"
+              />
               <div>
                 <p class="item_price">325 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -183,7 +311,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="7">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-6" />
+              <img
+                src="/img/item-7.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-7"
+              />
               <div>
                 <p class="item_price">410 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -193,7 +326,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="8">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-7" />
+              <img
+                src="/img/item-8.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-8"
+              />
               <div>
                 <p class="item_price">315 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -203,7 +341,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="9">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-8" />
+              <img
+                src="/img/item-9.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-9"
+              />
               <div>
                 <p class="item_price">320 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -213,7 +356,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="10">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-9" />
+              <img
+                src="/img/item-10.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-10"
+              />
               <div>
                 <p class="item_price">440 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -223,7 +371,12 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="11">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-10"/>
+              <img
+                src="/img/item-11.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-11"
+              />
               <div>
                 <p class="item_price">435 ₽</p>
                 <p class="item_scale">/кг</p>
@@ -233,22 +386,17 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__item-card" id="12">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-11"/>
+              <img
+                src="/img/item-12.jpg"
+                width="267px"
+                height="267px"
+                alt="icecream-12"
+              />
               <div>
                 <p class="item_price">355 ₽</p>
                 <p class="item_scale">/кг</p>
               </div>
               <p>Сливочное с кусочками черного шоколада</p>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="catalog__item-card" id="13">
-              <img src="https://via.placeholder.com/267x267" alt="icecream-12"/>
-              <div>
-                <p class="item_price">420 ₽</p>
-                <p class="item_scale">/кг</p>
-              </div>
-              <p>Сливочное с мятным сиропом</p>
             </article>
           </li>
         </ul>
@@ -284,22 +432,37 @@
         <ul class="footer__socials_list">
           <li class="footer__socials_link link_facebook">
             <a href="#">
-              <img src="https://via.placeholder.com/32x32" alt="facebook" />
+              <img
+                src="/img/facebook.svg"
+                width="32px"
+                height="32px"
+                alt="facebook"
+              />
             </a>
           </li>
           <li class="footer__socials_link link_vk">
             <a href="#">
-              <img src="https://via.placeholder.com/32x32" alt="vk" />
+              <img src="/img/vk.svg" width="32px" height="32px" alt="vk" />
             </a>
           </li>
           <li class="footer__socials_link link_instagram">
             <a href="#">
-              <img src="https://via.placeholder.com/32x32" alt="instagram" />
+              <img
+                src="/img/instagram.svg"
+                width="32px"
+                height="32px"
+                alt="instagram"
+              />
             </a>
           </li>
           <li class="footer__socials_link link_twitter">
             <a href="#">
-              <img src="https://via.placeholder.com/32x32" alt="twitter" />
+              <img
+                src="/img/twitter.svg"
+                width="32px"
+                height="32px"
+                alt="twitter"
+              />
             </a>
           </li>
         </ul>
@@ -307,7 +470,7 @@
       <section class="footer__nav">
         <ul class="footer__nav_list">
           <li class="footer__nav_link link_providers">
-            <img src="https://via.placeholder.com/15x13" alt="heart"> 
+            <img src="/img/heart.svg" width="15px" height="13px" alt="heart" />
             <a href="#">Для поставщиков</a>
           </li>
           <li class="footer__nav_link link_documents">
@@ -323,9 +486,15 @@
       </section>
       <section class="footer__roots">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="footer__roots_logo" src="https://via.placeholder.com/108x39" alt="html academy">
+          <img
+            class="footer__roots_logo"
+            src="/img/logo-htmlacademy.svg"
+            width="108px"
+            height="39px"
+            alt="html academy"
+          />
         </a>
-      <p class="footer__roots_info">Сделано в HTML Academy &copy; 2019</p>
+        <p class="footer__roots_info">Сделано в HTML Academy &copy; 2019</p>
       </section>
     </footer>
   </body>
